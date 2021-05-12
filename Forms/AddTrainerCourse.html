@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a trainer per course</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="form">
+        <div><button class="back"><i class="fa fa-hand-o-left" aria-hidden="true"></i><a href="javascript:history.back()"> Go Back</a></button></div>
+        <form action="Done.html" id="loginForm" onsubmit="validate(event)" method="GET">
+            <legend>
+                Add trainer per course
+            </legend>
+    
+            <p class="title">Trainer:<hr></p>
+            <div class="error" id="firstnameValidation"></div>
+            <label for="firstname">Firstname</label>
+            <input pattern="[A-Za-z]{0,30}" type="text" id="firstname" name="firstname" required/><br />
+    
+            <div class="error" id="lastnameValidation"></div>
+            <label for="lastname">Lastname</label>
+            <input pattern="[A-Za-z]{0,30}" type="text" id="lastname" name="lastname" required/><br />
+    
+            <p class="title">Course:<hr></p>
+            <div class="error" id="titleValidation"></div>
+            <label for="title">Title</label>
+            <input pattern="[C][B].+" type="text" id="title"  name="title"  placeholder="ex. CB12"  required><br>
+
+            <div class="error" id="streamValidation"></div>
+            <label for="stream">Stream</label>
+            <select type="text" id="stream" name="stream" required>
+            <option value="stream">C#</option>
+            <option value="stream">Java</option>
+            <option value="stream">Python</option>
+            <option value="stream">SQL</option>
+            </select>
+
+            <div class="error" id="typeValidation"></div>
+            <label for="type">Type</label>
+            <input type="radio" id="type" name="type" value="parttime" required />
+            Part time
+            <input type="radio" id="type" name="type" value="fulltime" required />
+            Full time<br />
+
+            <button type="reset" id="reset" name="reset"><i class="fa fa-undo" aria-hidden="true"></i> Reset</button>
+            <button id="submit" type="submit" formnovalidate>Submit</button>
+         </form>
+    </div>
+    <script src="validtrainercourse.js"></script>
+</body>
+</html>

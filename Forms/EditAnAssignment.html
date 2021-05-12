@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit the assignment</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+     <div class="edit">
+      <div><button class="back"><i class="fa fa-hand-o-left" aria-hidden="true"></i><a href="javascript:history.back()"> Go Back</a></button></div>
+      <form action="Done.html" id="EditForm" onsubmit="validate(event)">
+          <legend>
+             Edit the assignment
+          </legend>
+
+          <div class="error" id="titleassignmentValidation"></div>
+          <label for="titleassignment">Title</label>
+          <input type="text" id="titleassignment" name="titleassignment" value="Game" required><br>
+
+          <div class="error" id="descriptionValidation"></div>
+          <label for="description">Description</label>
+          <input type="text" id="description" name="description" value="Develop a game"  required><br>
+
+          <div class="error" id="subdatetimeValidation"></div>
+          <label for="subdatetime">Submission date time</label>
+          <input type="date" id="subdatetime" name="subdatetime" value="2021-03-30" min="2021-01-01" required>
+          <input type="time" id="subdatetime" name="subdatetime" value="23:59" required><br>
+
+          <div class="error" id="oralMarkValidation"></div>
+          <label for="oralmark">Oral Mark</label>
+          <input type="number" id="oralmark" name="oralmark"  value="20" min="0" max="20" placeholder="0-20" required ><br>
+     
+
+          <div class="error" id="totalMarkValidation"></div>
+          <label for="totalmark">Total mark</label>
+          <input type="number" id="totalmark" name="totalmark"  value="80" min="0" max="80" placeholder="0-80" required><br>
+
+          <button id="edit" type="edit" formnovalidate>Edit</button>
+         
+       </form>
+       <script src="validassignment.js"></script>
+      </body>
+</html>

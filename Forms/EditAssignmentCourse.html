@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit assignment per course</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+      <div class="edit">
+        <div><button class="back"><i class="fa fa-hand-o-left" aria-hidden="true"></i><a href="javascript:history.back()"> Go Back</a></button></div>
+          <form action="Done.html" id="EditForm" onsubmit="validate(event)">
+            <legend>
+               Edit assignment per course
+            </legend>
+            <p class="titleedit">Assignment:<hr></p>
+            <div class="error" id="titleassignmentValidation"></div>
+            <label for="titleassignment">Title</label>
+            <input type="text" id="titleassignment" name="titleassignment" value="Game"required><br>
+
+            <div class="error" id="descriptionValidation"></div>
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description" value="Develop a  game" required><br>
+
+            <p class="titleedit">Course:<hr></p>
+            <div class="error" id="titleValidation"></div>
+            <label for="title">Title</label>
+            <input pattern="[C][B].+" type="text" id="title"  name="title" value="CB12" placeholder="ex. CB12"  required><br>
+
+            <div class="error" id="streamValidation"></div>
+            <label for="stream">Stream</label>
+            <select type="text" id="stream" name="stream" required>
+              <option value="stream">C#</option>
+              <option value="stream">Java</option>
+              <option value="stream">Python</option>
+              <option value="stream">SQL</option>
+            </select>
+
+            <div class="error" id="typeValidation"></div>
+            <label for="type">Type</label>
+            <input type="radio" id="type" name="type" value="parttime" required />
+            Part time
+            <input type="radio" id="type" name="type" value="fulltime" required />
+            Full time<br>
+
+          <button type="edit" name="edit" formnovalidate>Edit</button>
+      </form>
+    </div>  
+      
+    <script src="validassignmentcourse.js"></script>
+
+  </body>
+</html>

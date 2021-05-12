@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update the trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="update">
+        <div><button class="back"><i class="fa fa-hand-o-left" aria-hidden="true"></i><a href="javascript:history.back()"> Go Back</a></button></div>       
+
+         <form action="Done.html" id="updateForm" onsubmit="validate(event)" method="GET">
+        
+            <legend>
+                Update a trainer
+            </legend>
+    
+            <div class="error" id="firstnameValidation"></div>
+            <label for="firstname">Firstname</label>
+            <input pattern="[A-Za-z]{0,30}" type="text" id="firstname" name="firstname" value="Pinelopi" required/><br />
+    
+            <div class="error" id="lastnameValidation"></div>
+            <label for="lastname">Lastname</label>
+            <input pattern="[A-Za-z]{0,30}" type="text" id="lastname" name="lastname" value="Petrou" required/><br />
+    
+            <div class="error" id="subjectValidation"></div>
+            <label for="subject">Subject</label>
+            <input type="text"id="subject" name="subject" value="C#" required><br>
+    
+            <button type="update" name="update" formnovalidate>Update</button> 
+         </form>
+    </div>
+    <script src="validtrainer.js"></script>
+</body>
+</html>
